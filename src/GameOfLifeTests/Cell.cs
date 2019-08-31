@@ -16,7 +16,7 @@ namespace GameOfLifeTests
         
         public void GenerateNewState()
         {
-            int aliveCellsCount = _fieldRepository.GetAliveCellsCount(_position);
+            int aliveCellsCount = _fieldRepository.GetAliveCellsCountForPosition(_position);
 
             if (aliveCellsCount == 2)
             {

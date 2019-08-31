@@ -2,6 +2,6 @@ namespace GameOfLifeTests
 {
     public interface IFieldRepository
     {
-        int GetAliveCellsCount(Point position);
+        int GetAliveCellsCountForPosition(Point position);
     }
 }

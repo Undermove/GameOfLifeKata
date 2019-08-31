@@ -15,7 +15,7 @@ namespace GameOfLifeTests
             };
             var _repository = new FieldRepository(_field);
 
-            var aliveCellsCount = _repository.GetAliveCellsCount(new Point(0, 0));
+            var aliveCellsCount = _repository.GetAliveCellsCountForPosition(new Point(0, 0));
 
             Assert.AreEqual(9, aliveCellsCount);
         }
@@ -34,7 +34,7 @@ namespace GameOfLifeTests
 //            _field[deadCellRow, deadCellColumn] = '.'; 
 //            var _repository = new FieldRepository(_field);
 //            
-//            var aliveCellsCount = _repository.GetAliveCellsCount(new Point(0,0));
+//            var aliveCellsCount = _repository.GetAliveCellsCountForPosition(new Point(0,0));
 //            
 //            Assert.AreEqual(8, aliveCellsCount);
 //        }

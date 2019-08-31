@@ -19,7 +19,7 @@ namespace GameOfLifeTests
         {
             Mock<IFieldRepository> fieldRepository = new Mock<IFieldRepository>();
             fieldRepository
-                .Setup(repository => repository.GetAliveCellsCount(It.IsAny<Point>()))
+                .Setup(repository => repository.GetAliveCellsCountForPosition(It.IsAny<Point>()))
                 .Returns(aliveCells);
             Cell cell = new Cell(fieldRepository.Object, isAliveState, new Point());
             
