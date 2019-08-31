@@ -21,6 +21,7 @@ namespace GameOfLifeTests
         }
 
         [TestCase(0, 1)]
+        [TestCase(1, 0)]
         public void ReturnSevenAliveNeighboursCount_WhenPointInLeftUpperCorner_AndOneDeadCellInNearPosition(
             int deadCellRow, 
             int deadCellColumn)

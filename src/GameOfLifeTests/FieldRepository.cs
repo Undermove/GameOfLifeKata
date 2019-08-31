@@ -34,8 +34,14 @@ namespace GameOfLifeTests
         {
             int aliveCellsCount = 8;
             int rightShift = position.J + 1;
+            int downShift = position.I + 1;
 
             if (!_field[position.I, rightShift].IsAlive)
+            {
+                aliveCellsCount--;
+            }
+
+            if (!_field[downShift, position.J].IsAlive)
             {
                 aliveCellsCount--;
             }
