@@ -46,6 +46,11 @@ namespace GameOfLifeTests
                 aliveCellsCount--;
             }
             
+            if (!_field[downShift, rightShift].IsAlive)
+            {
+                aliveCellsCount--;
+            }
+            
             return aliveCellsCount;
         }
 
