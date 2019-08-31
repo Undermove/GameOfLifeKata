@@ -32,7 +32,15 @@ namespace GameOfLifeTests
         
         public int GetAliveCellsCountForPosition(Point position)
         {
-            return 9;
+            int aliveCellsCount = 8;
+            int rightShift = position.J + 1;
+
+            if (!_field[position.I, rightShift].IsAlive)
+            {
+                aliveCellsCount--;
+            }
+            
+            return aliveCellsCount;
         }
 
         public int GetAliveCellsCount()
